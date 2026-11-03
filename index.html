@@ -3,249 +3,532 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Capnomic Financial</title>
+  <meta name="description" content="Privacy Policy for Capnomic Financial.">
+  <meta name="theme-color" content="#0b1f33">
+  <title>Privacy Policy | Capnomic Financial</title>
+
+  <!-- Load Urbanist from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg-color: #f8fafc;
-      --card-bg: #ffffff;
-      --text-main: #0f172a;
-      --text-secondary: #475569;
-      --border-color: #e2e8f0;
-      --primary-color: #0d7377;
+      --navy: #0b1f33;
+      --teal: #0f766e;
+      --bright-teal: #14b8a6;
+      --soft-teal: #e6f4f1;
+      --page: #f8fafc;
+      --white: #ffffff;
+      --text: #172b3a;
+      --muted: #64748b;
+      --border: #dce5e9;
+      --shadow: 0 24px 70px rgba(11, 31, 51, 0.08);
     }
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body,
+    button,
+    input,
+    textarea,
+    select {
+      font-family: "Urbanist", sans-serif;
     }
 
     body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      margin: 0;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(20, 184, 166, 0.10), transparent 28rem),
+        var(--page);
+      color: var(--text);
       font-size: 16px;
-      line-height: 1.65;
-      padding: 24px 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 760px;
+    a {
+      color: var(--teal);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      color: var(--navy);
+    }
+
+    .topbar {
+      border-bottom: 1px solid rgba(220, 229, 233, 0.85);
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .topbar-inner {
+      width: min(1080px, calc(100% - 40px));
+      min-height: 76px;
       margin: 0 auto;
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 32px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 20px;
-      margin-bottom: 28px;
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .site-link {
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(900px, calc(100% - 32px));
+      margin: 54px auto 64px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 44px 38px;
+      border-radius: 24px 24px 8px 24px;
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -80px;
+      top: -115px;
+      border: 1px solid rgba(20, 184, 166, 0.45);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 28px rgba(20, 184, 166, 0.06),
+        0 0 0 58px rgba(20, 184, 166, 0.04);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: #99f6e4;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: var(--bright-teal);
     }
 
     h1 {
-      font-size: 26px;
-      line-height: 1.3;
-      color: var(--text-main);
-      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+      margin: 0 0 14px;
+      color: var(--white);
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 800;
+      letter-spacing: -0.055em;
+      line-height: 1.08;
     }
 
-    .meta-info {
-      font-size: 14px;
-      color: var(--text-secondary);
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 610px;
+      margin: 0;
+      color: #d5e4ec;
+      font-size: 17px;
+    }
+
+    .hero-meta {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+      margin-top: 28px;
+      color: #c4d5df;
+      font-size: 13px;
+    }
+
+    .hero-meta strong {
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    .policy-card {
+      margin-top: 22px;
+      padding: 38px 44px;
+      border: 1px solid var(--border);
+      border-radius: 8px 24px 24px 24px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .intro-note {
+      margin: 0 0 28px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--bright-teal);
+      border-radius: 4px 12px 12px 4px;
+      background: var(--soft-teal);
+      color: #24534f;
+    }
+
+    .policy-section {
+      padding: 25px 0;
+      border-bottom: 1px solid #edf2f5;
+    }
+
+    .policy-section:first-of-type {
+      padding-top: 0;
+    }
+
+    .policy-section:last-of-type {
+      padding-bottom: 0;
+      border-bottom: 0;
     }
 
     h2 {
-      font-size: 19px;
-      line-height: 1.4;
-      color: var(--text-main);
-      margin-top: 28px;
-      margin-bottom: 12px;
-      padding-bottom: 4px;
-      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 13px;
+      color: var(--navy);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.3;
+    }
+
+    .section-number {
+      flex: 0 0 auto;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
     }
 
     p {
-      margin-bottom: 14px;
-      color: var(--text-secondary);
+      margin: 0 0 14px;
+      color: var(--muted);
     }
 
-    p strong, li strong {
-      color: var(--text-main);
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 700;
     }
 
     ul {
-      margin: 0 0 16px 22px;
-      color: var(--text-secondary);
+      margin: 12px 0 0;
+      padding-left: 22px;
+      color: var(--muted);
     }
 
     li {
-      margin-bottom: 8px;
+      margin: 0 0 9px;
+      padding-left: 4px;
     }
 
-    .notice-box {
-      background-color: #f0fdfa;
-      border-left: 4px solid var(--primary-color);
-      padding: 14px 16px;
-      margin: 18px 0;
-      border-radius: 4px;
-    }
-
-    .notice-box p {
+    li:last-child {
       margin-bottom: 0;
-      color: #134e4a;
-      font-size: 15px;
     }
 
-    .placeholder {
-      background-color: #fef3c7;
-      color: #92400e;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-weight: 600;
+    .contact-panel {
+      margin-top: 18px;
+      padding: 20px 22px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fbfdfe;
     }
 
-    footer {
-      margin-top: 36px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border-color);
+    .contact-panel p + p {
+      margin-top: 8px;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+      margin-top: 26px;
+      padding: 0 4px;
+      color: var(--muted);
       font-size: 13px;
-      color: var(--text-secondary);
-      text-align: center;
     }
 
-    @media (max-width: 600px) {
-      body {
-        padding: 12px 8px;
+    .footer a {
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner {
+        width: calc(100% - 28px);
+        min-height: 66px;
       }
-      .container {
-        padding: 20px 16px;
-        border-radius: 8px;
+
+      .brand {
+        font-size: 18px;
       }
-      h1 {
-        font-size: 22px;
+
+      .page {
+        width: calc(100% - 20px);
+        margin: 24px auto 36px;
       }
+
+      .hero {
+        padding: 30px 24px;
+        border-radius: 18px 18px 6px 18px;
+      }
+
+      .hero-copy {
+        font-size: 16px;
+      }
+
+      .policy-card {
+        padding: 26px 22px;
+        border-radius: 6px 18px 18px 18px;
+      }
+
       h2 {
-        font-size: 17px;
-        margin-top: 22px;
+        font-size: 20px;
+      }
+
+      .footer {
+        padding: 0 2px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
     }
   </style>
 </head>
+
 <body>
-
-<div class="container">
-  <header>
-    <h1>Privacy Policy</h1>
-    <div class="meta-info">
-      <strong>Application:</strong> Capnomic Financial (Package: com.capnomic.financial)<br>
-      <strong>Effective Date:</strong> <span class="placeholder">[Insert Effective Date, e.g., November 3, 2026]</span>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="https://capnomic.com" aria-label="Capnomic home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>Capnomic</span>
+      </a>
+      <a class="site-link" href="https://capnomic.com">capnomic.com ↗</a>
     </div>
-  </header>
+  </div>
 
-  <section>
-    <h2>1. Introduction</h2>
-    <p>
-      This Privacy Policy describes how <strong>Capnomic Financial</strong> (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;the Application&rdquo;), developed by <span class="placeholder">[Insert Developer or Organization Name]</span>, handles your information when you use our mobile application on Android.
-    </p>
-    <p>
-      Capnomic Financial provides offline-first financial calculation and planning tools, including Loan EMI calculations, Fixed Deposit estimates, SIP and investment projections, and retirement planning. We respect your privacy and believe you should know exactly what data the application touches and where it is kept.
-    </p>
-  </section>
-
-  <section>
-    <h2>2. Information and Data Collected</h2>
-    <p>
-      <strong>We do not collect, harvest, or transmit your personal or financial information to our own servers.</strong>
-    </p>
-    <ul>
-      <li><strong>No Account Creation:</strong> The application does not require registration, login, username, password, or profile creation.</li>
-      <li><strong>No Identity or Financial Profiling:</strong> We do not ask for or collect your name, email address, phone number, bank account details, credit card numbers, or government identification numbers.</li>
-      <li><strong>No Analytics or Tracking SDKs:</strong> The application does not integrate analytics tools, advertising networks, device tracking libraries, or telemetry software.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>3. On-Device (Local) Data Storage</h2>
-    <p>
-      The application operates locally on your mobile device. Any figures you input (such as principal amounts, interest rates, tenure lengths) and any saved plans or comparison profiles you create are stored exclusively on your device using Android&rsquo;s sandboxed application private storage (<code>SharedPreferences</code>).
-    </p>
-    <ul>
-      <li>Your saved calculations remain on your device and are accessible only by the Capnomic Financial application.</li>
-      <li>We have no access to the calculations, plans, or values you save.</li>
-      <li>You can delete this locally stored data at any time by clearing the application storage via your device settings (<strong>Settings &gt; Apps &gt; Capnomic Financial &gt; Storage &gt; Clear Data</strong>) or by uninstalling the application.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>4. Data Sharing and Third-Party Transfer</h2>
-    <div class="notice-box">
-      <p>
-        <strong>User-Initiated Sharing:</strong> Data leaves your device only when you deliberately decide to share it using your device&rsquo;s built-in Android share sheet.
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">Capnomic Financial</div>
+      <h1>Privacy Policy</h1>
+      <p class="hero-copy">
+        A clear explanation of how information is handled when you use
+        Capnomic Financial.
       </p>
-    </div>
-    <p>
-      The application features optional &ldquo;Share&rdquo; buttons on calculation screens (such as loan breakdowns, fixed deposit summaries, and comparison tables). When you tap this button:
-    </p>
-    <ul>
-      <li>The application generates a plain text summary of your calculation.</li>
-      <li>The summary is passed directly to the standard Android system sharing interface (<code>Intent.ACTION_SEND</code>).</li>
-      <li>You choose which external app (e.g., messaging apps, email clients, or note-taking apps) receives the text.</li>
-    </ul>
-    <p>
-      Once transmitted through the Android sharing dialog, that text is processed according to the privacy policy of the destination service or application you selected. Capnomic Financial does not monitor, log, or store your sharing history.
-    </p>
-  </section>
+      <div class="hero-meta">
+        <span><strong>App:</strong> Capnomic Financial</span>
+        <span><strong>Package ID:</strong> com.capnomic.financial</span>
+        <span><strong>Effective:</strong> November 3, 2026</span>
+      </div>
+    </header>
 
-  <section>
-    <h2>5. Device Permissions</h2>
-    <p>
-      Capnomic Financial is designed to require minimal device access:
-    </p>
-    <ul>
-      <li><strong>No Sensitive Permissions:</strong> The application does not request or require access to your location, camera, microphone, device contacts, call logs, SMS, or media libraries.</li>
-      <li><strong>No Network Permissions:</strong> The application&rsquo;s manifest does not declare or request the Android <code>INTERNET</code> permission. The application does not establish network connections.</li>
-    </ul>
-  </section>
+    <article class="policy-card">
+      <p class="intro-note">
+        This policy applies to the Capnomic Financial Android app. Please read
+        it alongside any notices shown within the app or by a connected
+        third-party service.
+      </p>
 
-  <section>
-    <h2>6. Children&rsquo;s Privacy</h2>
-    <p>
-      Capnomic Financial is a general-purpose utility designed for financial planning and calculations. The application is not directed at children under the age of 13. Because the application does not collect personal data, transmit information to remote servers, or create user accounts, we do not knowingly collect or solicit personal information from children.
-    </p>
-  </section>
+      <section class="policy-section">
+        <h2><span class="section-number">01</span> Introduction</h2>
+        <p>
+          Capnomic Financial (“the app,” “we,” “us,” or “our”) is a financial
+          calculation and planning application published by Capnomic. It
+          provides tools such as loan and EMI calculations, deposit estimates,
+          investment projections, goal planning, and retirement planning.
+        </p>
+        <p>
+          The app’s calculations are for informational and educational purposes
+          only. They are not a loan approval, an offer of financial products,
+          or personalized financial advice.
+        </p>
+      </section>
 
-  <section>
-    <h2>7. Data Security</h2>
-    <p>
-      Because we do not operate backend servers or transfer your data across the internet, your financial inputs and calculations cannot be accessed, intercepted, or breached on our servers. Your data security relies on the standard security protections of your Android device, including your lock screen, encryption, and device operating system controls.
-    </p>
-  </section>
+      <section class="policy-section">
+        <h2><span class="section-number">02</span> Information You Enter</h2>
+        <p>
+          You may enter figures such as loan amounts, interest rates, income,
+          expenses, savings, investment assumptions, or other values needed to
+          use a calculator or planning feature.
+        </p>
+        <p>
+          Do not enter passwords, card security codes, or other authentication
+          credentials into the app.
+        </p>
+        <p>
+          Information may be processed on your device to calculate results or
+          support features you choose to use. If a feature sends information to
+          an external service, that processing should be described in the
+          relevant feature and in the app’s applicable disclosures.
+        </p>
+      </section>
 
-  <section>
-    <h2>8. Changes to This Privacy Policy</h2>
-    <p>
-      We may update our Privacy Policy from time to time to reflect functional updates to the application or modifications in store policies. Any updates will be posted to this page with an updated Effective Date. We encourage you to review this policy periodically.
-    </p>
-  </section>
+      <section class="policy-section">
+        <h2><span class="section-number">03</span> Saved Information</h2>
+        <p>
+          If you use a feature that saves calculations or plans, the app may
+          store the information needed to make those items available to you
+          later. The location and duration of storage depend on how that
+          feature is implemented.
+        </p>
+        <p>
+          You can remove information stored locally by clearing the app’s data
+          through your Android device settings or by uninstalling the app.
+          Information handled by an external service may be subject to that
+          service’s retention and deletion practices.
+        </p>
+      </section>
 
-  <section>
-    <h2>9. Contact Us</h2>
-    <p>
-      If you have questions, concerns, or feedback regarding this Privacy Policy or the data practices of Capnomic Financial, please contact us:
-    </p>
-    <ul>
-      <li><strong>Developer / Publisher:</strong> <span class="placeholder">[Insert Developer / Publisher Name]</span></li>
-      <li><strong>Email:</strong> <span class="placeholder">[Insert Developer Contact Email, e.g., capnomic@gmail.com]</span></li>
-      <li><strong>Physical Address / Location:</strong> <span class="placeholder">[Insert Physical Address or City/Country, if applicable or required by your developer account]</span></li>
-    </ul>
-  </section>
+      <section class="policy-section">
+        <h2><span class="section-number">04</span> Sharing and Third Parties</h2>
+        <p>
+          If you choose to share a calculation or report, the app may pass the
+          content you selected to Android’s sharing interface. The app does
+          not control how the destination app or service uses information you
+          choose to send to it.
+        </p>
+        <p>
+          Some features may rely on third-party services, software libraries,
+          or APIs. Those providers may process information under their own
+          privacy policies. The app’s Google Play disclosures should reflect
+          any collection or sharing carried out by the app or its integrated
+          third-party components.
+        </p>
+      </section>
 
-  <footer>
-    <p>&copy; <span class="placeholder">[Insert Year, e.g., 2026]</span> Capnomic Financial. All rights reserved.</p>
-  </footer>
-</div>
+      <section class="policy-section">
+        <h2><span class="section-number">05</span> Permissions and Device Data</h2>
+        <p>
+          The app may use Android permissions or device features needed for
+          specific functions. The permissions requested by the installed
+          version can be reviewed in your Android settings and on the app’s
+          Google Play listing.
+        </p>
+        <p>
+          We will keep this policy and the app’s Google Play disclosures
+          consistent with the app’s actual permissions, integrations, and data
+          practices.
+        </p>
+      </section>
 
+      <section class="policy-section">
+        <h2><span class="section-number">06</span> Children’s Privacy</h2>
+        <p>
+          Capnomic Financial is a general-purpose financial utility and is not
+          designed specifically for children. If you believe a child has
+          provided personal information through a feature of the app, please
+          contact us using the details below so we can review the matter.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2><span class="section-number">07</span> Security and Retention</h2>
+        <p>
+          We take reasonable steps appropriate to the app’s design to protect
+          information handled by our services. No method of electronic storage
+          or transmission is completely secure. Information stored on your
+          device is also subject to your device’s security settings.
+        </p>
+        <p>
+          Retention periods depend on where information is stored and the
+          feature involved. Locally stored information can generally be removed
+          by clearing app data or uninstalling the app. Third-party services
+          follow their own retention practices.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2><span class="section-number">08</span> Your Choices</h2>
+        <p>
+          You decide what information to enter and whether to use optional
+          sharing or connected features. You can stop using a feature at any
+          time. For information handled by an external service, please consult
+          that service’s privacy policy.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2><span class="section-number">09</span> Policy Updates</h2>
+        <p>
+          We may update this Privacy Policy when the app’s features or data
+          practices change. The revised policy will be posted on this page with
+          an updated effective date. Please review it periodically.
+        </p>
+      </section>
+
+      <section class="policy-section">
+        <h2><span class="section-number">10</span> Contact</h2>
+        <p>
+          For privacy questions or concerns about Capnomic Financial, contact
+          Capnomic using the details below.
+        </p>
+
+        <div class="contact-panel">
+          <p><strong>Publisher:</strong> Capnomic</p>
+          <p><strong>Email:</strong> <a href="mailto:contact@capnomic.com">contact@capnomic.com</a></p>
+          <p><strong>Website:</strong> <a href="https://capnomic.com">https://capnomic.com</a></p>
+        </div>
+      </section>
+    </article>
+
+    <footer class="footer">
+      <span>© 2026 Capnomic. All rights reserved.</span>
+      <a href="https://capnomic.com">Finance for Bharat</a>
+    </footer>
+  </main>
 </body>
 </html>
